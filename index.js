@@ -74,6 +74,7 @@ function endGame() {
 return alert('YOU LOSE!')
 
 }
+
 function moveDodger(e) {
   const code = e.which
 
