@@ -62,7 +62,7 @@ function createRock(x) {
 }
 
 function endGame() {
-  clearInterval(gameInterval)
+ clearInterval(gameInterval)
 
   ROCKS.forEach(function(rock) { rock.remove() })
 
@@ -71,9 +71,9 @@ function endGame() {
   START.innerHTML = 'Play again?'
   START.style.display = 'inline'
 
-  return alert('YOU LOSE!')
-}
+return alert('YOU LOSE!')
 
+}
 function moveDodger(e) {
   const code = e.which
 
