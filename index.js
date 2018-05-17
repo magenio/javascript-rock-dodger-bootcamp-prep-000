@@ -61,19 +61,6 @@ function createRock(x) {
   return rock
 }
 
-function endGame() {
-  clearInterval(gameInterval)
-
-  ROCKS.forEach(function(rock) { rock.remove() })
-
-  document.removeEventListener('keydown', moveDodger)
-
-  START.innerHTML = 'Play again?'
-  START.style.display = 'inline'
-
-  return alert('YOU LOSE!')
-}
-
 function moveDodger(e) {
   const code = e.which
 
@@ -87,6 +74,19 @@ function moveDodger(e) {
   } else if (code === RIGHT_ARROW) {
     moveDodgerRight()
   }
+}
+
+function endGame() {
+  clearInterval(gameInterval)
+
+  ROCKS.forEach(function(rock) { rock.remove() })
+
+  document.removeEventListener('keydown', moveDodger)
+
+  START.innerHTML = 'Play again?'
+  START.style.display = 'inline'
+
+  return alert('YOU LOSE!')
 }
 
 function moveDodgerLeft() {
