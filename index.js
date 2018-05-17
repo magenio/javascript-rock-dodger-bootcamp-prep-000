@@ -66,7 +66,7 @@ function endGame() {
 
   ROCKS.forEach(function(rock) { rock.remove() })
 
-  document.removeEventListener('keydown', [moveDodger])
+  document.removeEventListener('keydown', [ function:moveDodger])
 
   START.innerHTML = 'Play again?'
   START.style.display = 'inline'
